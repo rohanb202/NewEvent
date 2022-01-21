@@ -5,9 +5,6 @@ const Modal = (props) => {
   return (
     <motion.div
       className=" relative w-full h-full BG nova bg-[#53081C] bg-opacity-40 z-20"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ ease: "circIn" }}
       data-scroll-container
     >
       <div className="bg-[#53081C] BG h-screen grid gap-10 md:grid-cols-2 justify-items-center place-content-center ">
