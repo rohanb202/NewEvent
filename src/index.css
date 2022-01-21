@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Nova";
+  src: url("./NovaRound-Regular.ttf");
+}
+@font-face {
+  font-family: "dehors";
+  src: url("./dehors.ttf");
+}
+.nova {
+  font-family: "Nova Round", cursive;
+}
+.dehors {
+  font-family: "dehors", cursive;
+}
+.BG {
+  background-image: url("./bgoverlay.svg");
+
+  background-repeat: repeat;
+}
+.borderx {
+  border: 5px solid;
+  /* border-image: repeating-linear-gradient(45deg, #f33, #3bf, #f33 30px) 60;*/
+
+  -moz-border-image: url("./border-2.png") 10 round;
+  -webkit-border-image: url("./border-2.png") 10 round;
+  -o-border-image: url("./border-2.png") 10 round;
+}
+.rotated {
+  transform: rotate(-180deg);
+}
+.stylers {
+  width: 75px;
+}
