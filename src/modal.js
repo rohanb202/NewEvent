@@ -26,7 +26,7 @@ const Modal = (props) => {
           className=" m-2 w-80 rounded-md p-2 md:p-5 md:w-full md:h-screen bg-white md:col-start-1"
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0 }}
         >
           <motion.img
             src={props.main.img}
@@ -37,7 +37,7 @@ const Modal = (props) => {
           className="row-start-2 md:row-start-1 md:p-10 md:m-10 md:col-start-2"
           initial={{ x: "200vw" }}
           animate={{ x: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0 }}
         >
           <h1 className="text-white font-primary text-center text-3xl md:text-7xl ">
             {props.main.text}
