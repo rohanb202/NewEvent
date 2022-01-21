@@ -248,8 +248,16 @@ function App(props) {
     const scrollElement = new LocomotiveScroll({
       el: ref.current,
       smooth: true,
-      smartphone: {
-        smooth: true,
+
+      mobile: {
+        breakpoint: 0,
+        smooth: false,
+        getDirection: true,
+      },
+      tablet: {
+        breakpoint: 0,
+        smooth: false,
+        getDirection: true,
       },
 
       multiplier: 0.5,
@@ -301,18 +309,13 @@ function App(props) {
 
   return (
     <>
-      <div ref={ref} data-scroll-section>
-        <motion.div className="relative text-center p-5 z-10  xl:h-60 xl:flex xl:justify-center items-center  dehors">
-          <img class="stylers" src={LeftWhite} alt=""></img>
-          <motion.h1
-            className="text-white text-6xl font-primary p-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, ease: "circIn" }}
-          >
+      <div ref={ref} data-scroll data-scroll-speed="10">
+        <motion.div className="relative text-center p-5 z-10  xl:h-60 flex justify-center items-center  dehors">
+          <img class="stylers " src={LeftWhite} alt=""></img>
+          <motion.h1 className="text-white text-5xl sm:text-6xl font-primary p-2">
             Events
           </motion.h1>
-          <img class="stylers rotated" src={LeftWhite} alt=""></img>
+          <img class="stylers rotated  " src={LeftWhite} alt=""></img>
         </motion.div>
 
         <div className="p-10 m-2 grid relative top-5 justify-center items-center grid-col-1 xl:grid-col-3 gap-10 ">
@@ -327,10 +330,20 @@ function App(props) {
           >
             {imgData2}
           </div>
-          <div className="xl:hidden" ref={ref2} data-scroll>
+          <div
+            className="xl:hidden"
+            ref={ref2}
+            data-scroll
+            data-scroll-speed=""
+          >
             {imgData2}
           </div>
-          <div className=" xl:col-start-3" ref={ref3} data-scroll>
+          <div
+            className=" xl:col-start-3"
+            ref={ref3}
+            data-scroll
+            data-scroll-speed=""
+          >
             {imgData3}
           </div>
         </div>
