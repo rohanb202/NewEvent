@@ -2,7 +2,7 @@ import Container from "./Container";
 import LocomotiveScroll from "locomotive-scroll";
 import "./loco.css";
 //import Contain from "./Contain";
-import { motion } from "framer-motion";
+
 import { useRef, useEffect } from "react";
 import LeftWhite from "./LEFT WHITE.svg";
 //import Loader from "./loader";
@@ -273,7 +273,7 @@ function App(props) {
       ref2.current.style.transform = `skewY(${clamp(distance, -10, 10)}deg)`;
       ref3.current.style.transform = `skewY(${clamp(-distance, -10, 10)}deg)`;
     });
-  }, [null]);
+  }, []);
 
   const modalSt = (data) => {
     props.onData({ state: data.state, main: dataMain[data.id - 1] });
@@ -310,13 +310,13 @@ function App(props) {
   return (
     <>
       <div ref={ref} data-scroll data-scroll-speed="10">
-        <motion.div className="relative text-center p-5 z-10  xl:h-60 flex justify-center items-center  dehors">
-          <img class="stylers " src={LeftWhite} alt=""></img>
-          <motion.h1 className="text-white text-5xl sm:text-6xl font-primary p-2">
+        <div className="relative text-center p-5 z-10  xl:h-60 flex justify-center items-center  dehors">
+          <img className="stylers " src={LeftWhite} alt=""></img>
+          <h1 className="text-white text-5xl sm:text-6xl font-primary p-2">
             Events
-          </motion.h1>
-          <img class="stylers rotated  " src={LeftWhite} alt=""></img>
-        </motion.div>
+          </h1>
+          <img className="stylers rotated  " src={LeftWhite} alt=""></img>
+        </div>
 
         <div className="p-10 m-2 grid relative top-5 justify-center items-center grid-col-1 xl:grid-col-3 gap-10 ">
           <div className="xl:col-start-1" ref={ref1}>

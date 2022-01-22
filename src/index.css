@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Nova+Round&display=swap");
 
 @font-face {
-  font-family: "Nova";
+  font-family: "nova";
   src: url("./NovaRound-Regular.ttf");
 }
 @font-face {
