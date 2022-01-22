@@ -11,10 +11,10 @@
   src: url("./dehors.ttf");
 }
 .nova {
-  font-family: "Nova Round", cursive;
+  font-family: "Nova Round";
 }
 .dehors {
-  font-family: "dehors", cursive;
+  font-family: "dehors";
 }
 .BG {
   background-image: url("./bgoverlay.svg");
